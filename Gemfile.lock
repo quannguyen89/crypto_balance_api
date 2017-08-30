@@ -1,0 +1,38 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    backports (3.8.0)
+    fast_blank (1.0.0)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
+    multi_json (1.12.1)
+    multi_xml (0.6.0)
+    mustermann (1.0.1)
+    rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
+    sinatra-contrib (2.0.0)
+      backports (>= 2.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.0)
+      sinatra (= 2.0.0)
+      tilt (>= 1.3, < 3)
+    tilt (2.0.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  fast_blank
+  httparty
+  sinatra
+  sinatra-contrib
+
+BUNDLED WITH
+   1.15.3
