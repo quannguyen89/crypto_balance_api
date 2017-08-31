@@ -10,15 +10,23 @@ get '/' do
 end
 
 get '/btc/:addr' do
-  balance = BlockchainInfo.btc_balance_at(params[:addr], time)
-  json balance: balance, status: 1
+  begin
+    balance = BlockchainInfo.btc_balance_at(params[:addr], time)
+    json balance: balance, status: 1
+  rescue 
+    json status: 0
+  end
 end
 
 get '/eth/:addr' do
-  balance = EtherScan.eth_balance_at(params[:addr], time)
-  json balance: balance, status: 1
+  begin
+    balance = EtherScan.eth_balance_at(params[:addr], time)
+    json balance: balance, status: 1
+  rescue
+    json status: 0
+  end
 end
 
 def time
-  params[:at].nil? ? Time.now : Time.parse(params[:at])
+  params[:at].nil? ? Time.now : (Time.parse(params[:at]))
 end
