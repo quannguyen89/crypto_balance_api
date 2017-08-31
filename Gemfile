@@ -5,5 +5,5 @@ gem 'sinatra-contrib'
 gem 'fast_blank'
 
 group :development, :test do
-  gem 'byebug'
+  # gem 'byebug'
 end
